@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.xml.ws.RequestWrapper;
+import java.util.List;
+
 @RestController
 public class MenuController {
     private Logger log = LoggerFactory.getLogger(MenuController.class);
@@ -24,6 +27,7 @@ public class MenuController {
      * @param pageSize
      * @param page
      * @return
+     * http://localhost:8443/menus?pageSize=1&page=1
      */
 //    @InterestLog
     @GetMapping("/menus")
@@ -33,6 +37,17 @@ public class MenuController {
         pageResult.setTotalCount(menuService.menusSize(pageSize, page * pageSize, menuId));
         log.debug("The method is ending");
         return new ResponseWrapper<>(pageResult);
+    }
+    /**
+     * 通过parentId得到menus列表
+     *
+     * @param parentId
+     * @return
+     * http://localhost:8443//menus/parentId?parentId=0
+     */
+    @GetMapping("/menus/parentId")
+    public ResponseWrapper<List<MenuEntity>> menusByParentId(int parentId) {
+        return new ResponseWrapper<>(menuService.menusByParentId(parentId));
     }
 
 }

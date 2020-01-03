@@ -30,4 +30,12 @@ public interface MenuService {
      * @return
      */
     Integer menusSize(int pageSize, int start, String menuId);
+    /**
+     * 通过parentId得到menus列表
+     *
+     * @param parentId
+     * @return
+     */
+    List<MenuEntity> menusByParentId(int parentId);
+
 }

@@ -27,4 +27,9 @@ public class MenuServiceImpl implements MenuService {
     public Integer menusSize(int pageSize, int start, String menuId) {
         return menuDao.menusSize(pageSize, start, menuId);
     }
+
+    @Override
+    public List<MenuEntity> menusByParentId(int parentId) {
+        return menuDao.menusByParentId(parentId);
+    }
 }

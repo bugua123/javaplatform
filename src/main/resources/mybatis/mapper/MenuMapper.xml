@@ -67,15 +67,15 @@
             <!--</if>-->
         <!--</where>-->
     <!--</delete>-->
-    <!--&lt;!&ndash; 通过parentId得到menus列表 &ndash;&gt;-->
-    <!--<select id="menusByParentId" resultMap="menuMap">-->
-        <!--select * from sys_menu-->
-        <!--<where>-->
-            <!--<if test="parentId != null">-->
-                <!--parent_id = #{parentId}-->
-            <!--</if>-->
-        <!--</where>-->
-    <!--</select>-->
+    <!-- 通过parentId得到menus列表 -->
+    <select id="menusByParentId" resultMap="menuMap">
+        select * from sys_menu
+        <where>
+            <if test="parentId != null">
+                parent_id = #{parentId}
+            </if>
+        </where>
+    </select>
 
     <!--<select id="getParentMenuListById" resultMap="menuMap">-->
         <!--select * from sys_menu-->

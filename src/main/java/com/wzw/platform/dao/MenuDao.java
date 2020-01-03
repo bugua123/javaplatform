@@ -31,4 +31,11 @@ public interface MenuDao {
     Integer menusSize(@Param("pageSize") int pageSize, @Param("start") int start,
                       @Param("menuId") String menuId);
 
+    /**
+     * 通过parentId得到menus列表
+     *
+     * @param parentId
+     * @return
+     */
+    List<MenuEntity> menusByParentId(@Param("parentId") int parentId);
 }
