@@ -30,6 +30,28 @@ public interface MenuService {
      * @return
      */
     Integer menusSize(int pageSize, int start, String menuId);
+
+    /**
+     * 新建菜单信息
+     *
+     * @param menuEntity
+     */
+    void insertMenu(MenuEntity menuEntity);
+
+    /**
+     * 修改菜单信息
+     *
+     * @param menuEntity
+     */
+    void updateMenu(MenuEntity menuEntity);
+
+    /**
+     * 删除菜单信息
+     *
+     * @param groupId
+     */
+    void deleteMenus(List<String> groupId);
+
     /**
      * 通过parentId得到menus列表
      *
@@ -38,4 +60,9 @@ public interface MenuService {
      */
     List<MenuEntity> menusByParentId(int parentId);
 
+    /**
+     * 获取二级菜单
+     * @return
+     */
+    List<MenuEntity> getSubmenus();
 }
