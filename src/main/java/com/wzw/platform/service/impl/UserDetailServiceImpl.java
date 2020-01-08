@@ -4,7 +4,9 @@ import com.wzw.platform.dao.UserDetailDao;
 import com.wzw.platform.model.entity.UserDetailEntity;
 import com.wzw.platform.service.UserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service(value = "UserDetailServiceImpl")
 public class UserDetailServiceImpl implements UserDetailService {
     @Autowired
     private UserDetailDao userDetailDao;

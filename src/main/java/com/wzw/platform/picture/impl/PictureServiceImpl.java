@@ -5,10 +5,12 @@ import com.wzw.platform.properties.PathsProperties;
 import com.wzw.platform.utils.DateUtil;
 import com.wzw.platform.utils.ImageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
+@Service("PictureServiceImpl")
 public class PictureServiceImpl implements PictureService {
     @Autowired
     private PathsProperties  pathsProperties;

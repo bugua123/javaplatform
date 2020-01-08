@@ -15,7 +15,7 @@
         <result column="del" property="del"/>
     </resultMap>
 
-    <resultMap id="articleResponse" type="com.interest.model.response.ArticleResponse">
+    <resultMap id="articleResponse" type="com.wzw.platform.model.response.ArticleResponse">
         <id column="id" property="id"/>
         <result column="title" property="title"/>
         <result column="info" property="info"/>
@@ -28,7 +28,7 @@
         <result column="userHeadImg" property="userHeadImg"/>
     </resultMap>
 
-    <resultMap id="articleDetailResponse" type="com.interest.model.response.ArticleDetailResponse">
+    <resultMap id="articleDetailResponse" type="com.wzw.platform.model.response.ArticleDetailResponse">
         <id column="id" property="id"/>
         <result column="title" property="title"/>
         <result column="content" property="content"/>
